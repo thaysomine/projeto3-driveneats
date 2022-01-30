@@ -12,6 +12,14 @@ function selecionarPratos(classeBotao,tipoPrato) {
 
     const botao = document.querySelector(classeBotao);
     botao.classList.add("selecionado");
+
+    if (pratoEscolhido !== null && bebidaEscolhida !== null && sobremesaEscolhida !== null) {
+        const concluir = document.querySelector(".finalizar-pedido");
+        concluir.classList.add("concluir");
+        const fechar = document.querySelector(".fecharTexto")
+        fechar.innerHTML = "Fechar pedido";
+        fechar.classList.add("fecharTextoCentralizado");
+    }
 }
 
 function selecionarBebidas(classeBotao,tipoPrato) {
@@ -24,6 +32,14 @@ function selecionarBebidas(classeBotao,tipoPrato) {
 
     const botao = document.querySelector(classeBotao);
     botao.classList.add("selecionado");
+
+    if (pratoEscolhido !== null && bebidaEscolhida !== null && sobremesaEscolhida !== null) {
+        const concluir = document.querySelector(".finalizar-pedido");
+        concluir.classList.add("concluir");
+        const fechar = document.querySelector(".fecharTexto")
+        fechar.innerHTML = "Fechar pedido";
+        fechar.classList.add("fecharTextoCentralizado");
+    }
 }
 
 function selecionarSobremesas(classeBotao,tipoPrato) {
@@ -36,5 +52,12 @@ function selecionarSobremesas(classeBotao,tipoPrato) {
 
     const botao = document.querySelector(classeBotao);
     botao.classList.add("selecionado");
-}
 
+    if (pratoEscolhido !== null && bebidaEscolhida !== null && sobremesaEscolhida !== null) {
+        const concluir = document.querySelector(".finalizar-pedido");
+        concluir.classList.add("concluir");
+        const fechar = document.querySelector(".fecharTexto")
+        fechar.innerHTML = "Fechar pedido";
+        fechar.classList.add("fecharTextoCentralizado");
+    }
+}
