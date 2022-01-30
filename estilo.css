@@ -80,7 +80,9 @@ img {
     margin-bottom: 17px;
 }
 
-.prato {
+.prato1 , .prato2 , .prato3 , .prato4 ,
+.bebida1 , .bebida2 , .bebida3 , .bebida4 ,
+.sobremesa1 , .sobremesa2 , .sobremesa3 , .sobremesa4 {
     width: 144px;
     height: 216px;
     background-color: #FFFFFF;
@@ -98,6 +100,7 @@ img {
     justify-content: space-between;
     overflow: hidden;
     overflow-x: scroll;   
+    position: relative;
 }
 
 /* botão finalzar pedido */
@@ -127,5 +130,19 @@ footer {
     color: #FFFFFF;
 }
 
+/* css para js */
+.selecionado {
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
 
-
+}
+.check {
+    position: absolute;
+    width: 16.5px;
+    height: 16.5px;
+    left: 143px;
+    top: 170px;
+    
+}
+.oculto {
+    visibility: hidden;
+}
