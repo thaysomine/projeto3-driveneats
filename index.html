@@ -24,7 +24,7 @@
     <div class="corpo">
         <div class="pbs">Primeiro, seu prato</div>
         <div class="pratos" data-identifier="dishes">
-            <div onclick="selecionarPratos('.prato1','Toast Avocado','R$ 9.00')" class="prato1" data-identifier="food-option">
+            <div onclick="selecionarPratos(this)" class="prato1" data-identifier="food-option">
                 <img src="imagens/prato1.png" alt="Toast Avocado">
                 <p class="food-title" data-identifier="food-title">Toast Avocado</p>
                 <p class="food-description">Pão, ovo, bacon e a melhor guacamole!</p>
@@ -32,99 +32,112 @@
                 <img class="check oculto" src="imagens/checkmark-circle.svg" alt="">
             </div>
 
-            <div onclick="selecionarPratos('.prato2','Bruschetta Caprese','R$ 12.00')" class="prato2" data-identifier="food-option"> 
+            <div onclick="selecionarPratos(this)" class="prato2" data-identifier="food-option"> 
                 <img src="imagens/prato2.png" alt="Bruschetta Caprese">
                 <p class="food-title" data-identifier="food-title">Bruschetta Caprese</p>
                 <p class="food-description">Bruschetta com muuuito queijo!!</p>
                 <p class="food-price" data-identifier="food-price">R$ 12,00</p>
+                <img class="check oculto" src="imagens/checkmark-circle.svg" alt="">
             </div>
 
-            <div onclick="selecionarPratos('.prato3','Focaccia','R$ 17.00')" class="prato3" data-identifier="food-option">
+            <div onclick="selecionarPratos(this)" class="prato3" data-identifier="food-option">
                 <img src="imagens/prato3.png" alt="Focaccia">
                 <p class="food-title" data-identifier="food-title">Focaccia</p>
                 <p class="food-description">Gorgonzola com cebola caramelizada.</p>
                 <p class="food-price" data-identifier="food-price">R$ 17,00</p>
+                <img class="check oculto" src="imagens/checkmark-circle.svg" alt="">
             </div>
 
-            <div onclick="selecionarPratos('.prato4','Bruschetta Linguiça','R$ 15.00')" class="prato4" data-identifier="food-option">
+            <div onclick="selecionarPratos(this)" class="prato4" data-identifier="food-option">
                 <img src="imagens/prato4.png" alt="Bruschetta Linguiça">
                 <p class="food-title" data-identifier="food-title">Bruschetta Linguiça</p>
                 <p class="food-description">Bruschetta de linguiça Blumenau :)</p>
                 <p class="food-price" data-identifier="food-price">R$ 15,00</p>
+                <img class="check oculto" src="imagens/checkmark-circle.svg" alt="">
             </div>
         </div>
 
         <div class="pbs">Agora, sua bebida</div>
         <div class="bebidas" data-identifier="drinks">
-            <div onclick="selecionarBebidas('.bebida1','Cappuccino','R$ 4.90')" class="bebida1" data-identifier="food-option">
+            <div onclick="selecionarBebidas(this)" class="bebida1" data-identifier="food-option">
                 <img src="imagens/bebida1.png" alt="Cappuccino">
                 <p class="food-title" data-identifier="food-title">Cappuccino</p>
                 <p class="food-description">Doce e quentinho ;3 (com canela)</p>
                 <p class="food-price" data-identifier="food-price">R$ 4,90</p>
+                <img class="check oculto" src="imagens/checkmark-circle.svg" alt="">
             </div>
 
-            <div onclick="selecionarBebidas('.bebida2','Suco de Melância','R$ 8.00')" class="bebida2" data-identifier="food-option">
+            <div onclick="selecionarBebidas(this)" class="bebida2" data-identifier="food-option">
                 <img src="imagens/bebida2.png" alt="Suco de Melancia">
                 <p class="food-title" data-identifier="food-title">Suco de Melância</p>
                 <p class="food-description">Natural, feito na hora!</p>
                 <p class="food-price" data-identifier="food-price">R$ 8,00</p>
+                <img class="check oculto" src="imagens/checkmark-circle.svg" alt="">
             </div>
 
-            <div onclick="selecionarBebidas('.bebida3','Caldo de Cana','R$ 3.90')" class="bebida3" data-identifier="food-option">
+            <div onclick="selecionarBebidas(this)" class="bebida3" data-identifier="food-option">
                 <img src="imagens/bebida3.png" alt="Caldo de Cana">
                 <p class="food-title" data-identifier="food-title">Caldo de Cana</p>
                 <p class="food-description">Paixão dos brasileiros</p>
                 <p class="food-price" data-identifier="food-price">R$ 3,90</p>
+                <img class="check oculto" src="imagens/checkmark-circle.svg" alt="">
             </div>
 
-            <div onclick="selecionarBebidas('.bebida4','Chá Gelado','R$ 9.00')" class="bebida4" data-identifier="food-option">
+            <div onclick="selecionarBebidas(this)" class="bebida4" data-identifier="food-option">
                 <img src="imagens/bebida4.png" alt="Cha Gelado">
                 <p class="food-title" data-identifier="food-title">Chá Gelado</p>
                 <p class="food-description">Chá gelado com limão, refrescante!</p>
                 <p class="food-price" data-identifier="food-price">R$ 9,00</p>
+                <img class="check oculto" src="imagens/checkmark-circle.svg" alt="">
             </div>
         </div>
 
         <div class="pbs">Por fim, sua sobremesa</div>
         <div class="sobremesas" data-identifier="desserts">
-            <div onclick="selecionarSobremesas('.sobremesa1','Torta de Maçã','R$ 10.90')" class="sobremesa1" data-identifier="food-option">
+            <div onclick="selecionarSobremesas(this)" class="sobremesa1" data-identifier="food-option">
                 <img src="imagens/sobre1.png" alt="Torta de maça">
                 <p class="food-title" data-identifier="food-title">Torta de Maçã</p>
                 <p class="food-description">Torta de maçã com sorvete ;)</p>
                 <p class="food-price" data-identifier="food-price">R$ 10,90</p>
+                <img class="check oculto" src="imagens/checkmark-circle.svg" alt="">
             </div>
 
-            <div onclick="selecionarSobremesas('.sobremesa2','Bolo Arco-íris','R$ 14.90')" class="sobremesa2" data-identifier="food-option">
+            <div onclick="selecionarSobremesas(this)" class="sobremesa2" data-identifier="food-option">
                 <img src="imagens/sobre2.png" alt="Bolo pride">
                 <p class="food-title" data-identifier="food-title">Bolo Arco-íris</p>
                 <p class="food-description">Fatia bolo arco-íris, macio e molhadinho!</p>
                 <p class="food-price" data-identifier="food-price">R$ 14,90</p>
+                <img class="check oculto" src="imagens/checkmark-circle.svg" alt="">
             </div>
 
-            <div onclick="selecionarSobremesas('.sobremesa3','Mini Bolo Cítrico','R$ 8.90')" class="sobremesa3" data-identifier="food-option">
+            <div onclick="selecionarSobremesas(this)" class="sobremesa3" data-identifier="food-option">
                 <img src="imagens/sobre3.png" alt="bolinho siciliano">
                 <p class="food-title" data-identifier="food-title">Mini Bolo Cítrico</p>
                 <p class="food-description">Mini bolo de limão siciliano</p>
                 <p class="food-price" data-identifier="food-price">R$ 8,90</p>
+                <img class="check oculto" src="imagens/checkmark-circle.svg" alt="">
             </div>
 
-            <div onclick="selecionarSobremesas('.sobremesa4','Cookie Recheado','R$ 6.00')" class="sobremesa4" data-identifier="food-option">
+            <div onclick="selecionarSobremesas(this)" class="sobremesa4" data-identifier="food-option">
                 <img src="imagens/sobre4.png" alt="Cookie Recheado">
                 <p class="food-title" data-identifier="food-title">Cookie Recheado</p>
                 <p class="food-description">Cookie com muuuito recheio!</p>
                 <p class="food-price" data-identifier="food-price">R$ 6,00</p>
+                <img class="check oculto" src="imagens/checkmark-circle.svg" alt="">
             </div>
         </div>
     </div>
 
     <footer>
-        <div onclick="finalizarPedido()" class="finalizar-pedido">
+        <div class="finalizar-pedido">
             <p class="fecharTexto">Selecione os 3 itens para fechar o pedido</p>
+        </div>
+        <div onclick="finalizarPedido()" class="finalizar-pedido concluir oculto fecharTextoCentralizado">
+            <p class="fecharTexto">Finalizar pedido</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
-
 
 </body>
 

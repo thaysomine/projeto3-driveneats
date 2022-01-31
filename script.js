@@ -2,72 +2,81 @@ let pratoEscolhido = null;
 let bebidaEscolhida = null;
 let sobremesaEscolhida = null;
 
-let precoPrato = null;
-let precoBebida = null;
-let precoSobremesa = null;
+let precoTotal;
+
+let precoPrato;
+let precoBebida;
+let precoSobremesa;
+
+let nomePrato;
+let nomeBebida;
+let nomeSobremesa;
+
+// Converter
+function converte() {
+    precoPrato = pratoEscolhido.getElementsByTagName("p")[2].innerText;
+    precoBebida = bebidaEscolhida.getElementsByTagName("p")[2].innerText;
+    precoSobremesa = sobremesaEscolhida.getElementsByTagName("p")[2].innerText;
+
+    let soma = apenasNumeros(precoPrato) + apenasNumeros(precoBebida) + apenasNumeros(precoSobremesa)  ;
+    precoTotal = (soma/100).toFixed(2);
+
+    nomePrato = pratoEscolhido.getElementsByTagName("p")[0].innerText;
+    nomeBebida = bebidaEscolhida.getElementsByTagName("p")[0].innerText;
+    nomeSobremesa = sobremesaEscolhida.getElementsByTagName("p")[0].innerText;
+}
 
 // Libera nosso botão
 function liberarBotao() {
     if (pratoEscolhido !== null && bebidaEscolhida !== null && sobremesaEscolhida !== null) {
-        const concluir = document.querySelector(".finalizar-pedido");
-        concluir.classList.add("concluir");
-        const fechar = document.querySelector(".fecharTexto")
-        fechar.innerHTML = "Fechar pedido";
-        fechar.classList.add("fecharTextoCentralizado");
+        document.querySelectorAll(".finalizar-pedido")[0].classList.add("oculto");
+        document.querySelectorAll(".finalizar-pedido")[1].classList.remove("oculto");
     }
 }
 
 // Seleciona o prato
-function selecionarPratos(classeBotao,tipoPrato,preco) {
-    const selecionado = document.querySelector(".pratos .selecionado");
-    if (selecionado !== null) {
-        selecionado.classList.remove("selecionado");
+function selecionarPratos(prato) {
+    if (pratoEscolhido !== null) {
+        pratoEscolhido.classList.remove("selecionado");
+        pratoEscolhido.getElementsByTagName("img")[1].classList.add("oculto");
+    }
+    prato.classList.add('selecionado');
+    prato.getElementsByTagName("img")[1].classList.remove("oculto");
+    pratoEscolhido = prato;
+    liberarBotao();
+}
+function selecionarBebidas(bebida) {
+    if (bebidaEscolhida !== null) {
+        bebidaEscolhida.classList.remove("selecionado");
+        bebidaEscolhida.getElementsByTagName("img")[1].classList.add("oculto");
     }
 
-    pratoEscolhido = tipoPrato;
-    precoPrato = preco;
-
-    const botao = document.querySelector(classeBotao);
-    botao.classList.add("selecionado");
-
+    bebida.classList.add('selecionado');
+    bebida.getElementsByTagName("img")[1].classList.remove("oculto");
+    bebidaEscolhida = bebida;
     liberarBotao();
 }
 
-function selecionarBebidas(classeBotao,tipoPrato,preco) {
-    const selecionado = document.querySelector(".bebidas .selecionado");
-    if (selecionado !== null) {
-        selecionado.classList.remove("selecionado");
+function selecionarSobremesas(sobremesa) {
+    if (sobremesaEscolhida !== null) {
+        sobremesaEscolhida.classList.remove("selecionado");
+        sobremesaEscolhida.getElementsByTagName("img")[1].classList.add("oculto");
     }
-    
-    bebidaEscolhida = tipoPrato;
-    precoBebida = preco;
-
-    const botao = document.querySelector(classeBotao);
-    botao.classList.add("selecionado");
-
-    liberarBotao();
-}
-
-function selecionarSobremesas(classeBotao,tipoPrato,preco) {
-    const selecionado = document.querySelector(".sobremesas .selecionado");
-    if (selecionado !== null) {
-        selecionado.classList.remove("selecionado");
-    }
-    
-    sobremesaEscolhida = tipoPrato;
-    precoSobremesa = preco;
-
-    const botao = document.querySelector(classeBotao);
-    botao.classList.add("selecionado");
-
+    sobremesa.classList.add('selecionado');
+    sobremesa.getElementsByTagName("img")[1].classList.remove("oculto");
+    sobremesaEscolhida = sobremesa;
     liberarBotao();
 }
 
 function finalizarPedido() {
-    let mensagem = "Olá gostaria de fazer o pedido: \n" +
-    "- Prato: " + pratoEscolhido + "\n" + 
-    "- Bebida: " + bebidaEscolhida + "\n" +
-    "- Sobremesa: " + sobremesaEscolhida + "\n";
+    converte();
 
+    let mensagem = `Olá gostaria de fazer o pedido:%0a- Prato: ${nomePrato}%0a- Bebida: ${nomeBebida}%0a- Sobremesa: ${nomeSobremesa}%0aPreço: R$${precoTotal}`;
     window.open("https://wa.me/+5547992705975?text=" + mensagem);
+}
+
+function apenasNumeros(string) 
+{
+    let numsStr = string.replace(/[^0-9]/g,'')
+    return parseInt(numsStr);
 }
